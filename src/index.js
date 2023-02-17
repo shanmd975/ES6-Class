@@ -1,11 +1,10 @@
-<!-- GO TO SRC >> INDEX.JS THEN PASTE  ---->
-
 class API {
-  #secure = null; // private field
+  #secure = null;
+  url = null;
+  method = 'GET';
 
-  constructor(url, method = 'GET') {
+  constructor(url) {
     this.url = url;
-    this.method = method;
     this.#secure = url.startsWith('https');
   }
 
@@ -32,4 +31,3 @@ console.log(s.method); // GET
 console.log(s.secure); // Uncaught SyntaxError: Private field '#secure' must be declared in an enclosing class
 
 module.exports = { API }
-Footer
